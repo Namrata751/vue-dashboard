@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import Header from "./Header.vue";
-import Footer from "./Footer.vue";
+import AppSidebar from "@/components/AppSidebar.vue";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 </script>
 
 <template>
-	<Header />
-	<main class="">
-		<slot></slot>
-	</main>
-	<Footer />
+	<SidebarProvider>
+		<AppSidebar />
+		<main>
+			<SidebarTrigger />
+			<slot />
+		</main>
+	</SidebarProvider>
 </template>
