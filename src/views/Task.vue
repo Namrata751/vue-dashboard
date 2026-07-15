@@ -1,54 +1,67 @@
 <template>
 	<div class="flex h-full bg-gray-50">
-		<!-- Sidebar -->
-		<aside
-			class="relative w-[320px] shrink-0 border-r border-gray-200 bg-white px-5 py-6"
+		<div
+			class="relative shrink-0 transition-all duration-300"
+			:class="showSidebar ? 'w-[320px]' : 'w-0'"
 		>
-			<h1 class="mb-4 text-xl font-bold text-gray-900">Boards</h1>
+			<aside
+				class="absolute inset-y-0 left-0 w-[320px] overflow-hidden border-r border-gray-200 bg-white px-5 py-6 transition-all duration-300"
+				:class="
+					showSidebar
+						? 'translate-x-0 opacity-100'
+						: '-translate-x-full opacity-0'
+				"
+			>
+				<h1 class="mb-4 text-xl font-bold text-gray-900">Boards</h1>
 
-			<input
-				v-model="filterText"
-				type="text"
-				placeholder="filter boards"
-				class="mb-6 w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-			/>
+				<input
+					v-model="filterText"
+					type="text"
+					placeholder="filter boards"
+					class="mb-6 w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+				/>
 
-			<div class="mb-6">
-				<div class="mb-2 flex items-center gap-2">
-					<h2 class="text-base font-bold text-gray-900">My Boards</h2>
-					<button
-						class="flex h-5 w-5 items-center justify-center text-gray-500 hover:text-gray-800"
-						@click="createBoard"
-					>
-						<Plus class="h-4 w-4" />
-					</button>
+				<div class="mb-6">
+					<div class="mb-2 flex items-center gap-2">
+						<h2 class="text-base font-bold text-gray-900">
+							My Boards
+						</h2>
+						<button
+							class="flex h-5 w-5 items-center justify-center text-gray-500 hover:text-gray-800"
+							@click="createBoard"
+						>
+							<Plus class="h-4 w-4" />
+						</button>
+					</div>
+
+					<ul class="space-y-1">
+						<li v-for="board in myBoards" :key="board.name">
+							<button
+								class="flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-sm text-gray-700 hover:bg-gray-100"
+							>
+								<LayoutGrid class="h-4 w-4 text-gray-500" />
+								{{ board.name }}
+							</button>
+						</li>
+					</ul>
 				</div>
 
-				<ul class="space-y-1">
-					<li v-for="board in myBoards" :key="board.name">
-						<button
-							class="flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-sm text-gray-700 hover:bg-gray-100"
-						>
-							<LayoutGrid class="h-4 w-4 text-gray-500" />
-							{{ board.name }}
-						</button>
-					</li>
-				</ul>
-			</div>
+				<div>
+					<h2 class="text-base font-bold text-gray-900">
+						Team Boards
+					</h2>
+				</div>
+			</aside>
 
-			<div>
-				<h2 class="text-base font-bold text-gray-900">Team Boards</h2>
-			</div>
-
-			<!-- Collapse toggle -->
 			<button
-				class="absolute -right-4 top-24 flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-400 shadow-sm hover:text-gray-600"
+				@click="showSidebar = !showSidebar"
+				class="absolute -right-4 top-24 z-50 flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 bg-white shadow-sm"
 			>
-				<ChevronLeft class="h-4 w-4" />
+				<ChevronLeft v-if="showSidebar" class="h-4 w-4" />
+				<ChevronRight v-else class="h-4 w-4" />
 			</button>
-		</aside>
+		</div>
 
-		<!-- Main content -->
 		<main class="flex-1 px-8 py-6">
 			<div class="mb-5 flex items-center gap-2">
 				<User class="h-5 w-5 text-gray-800" />
@@ -165,15 +178,13 @@
 			</div>
 		</main>
 
-		<!-- Add Board popup -->
 		<Dialog v-model:open="addBoardOpen">
-			<DialogContent class="sm:max-w-[480px]">
+			<DialogContent class="sm:max-w-120">
 				<DialogHeader>
 					<DialogTitle>Add Board</DialogTitle>
 				</DialogHeader>
 
 				<div class="space-y-5 py-2">
-					<!-- Board Title -->
 					<div>
 						<label class="mb-1.5 block text-sm text-gray-700">
 							Board Title <span class="text-red-500">*</span>
@@ -181,15 +192,17 @@
 						<Input v-model="form.name" type="text" />
 					</div>
 
-					<!-- Board Description -->
 					<div>
 						<label class="mb-1.5 block text-sm text-gray-700"
 							>Board Description</label
 						>
-						<textarea v-model="form.description" rows="3" />
+						<textarea
+							v-model="form.description"
+							rows="3"
+							class="border rounded p-3 w-full"
+						/>
 					</div>
 
-					<!-- Start Date / Due Date -->
 					<div class="grid grid-cols-2 gap-4">
 						<div>
 							<label class="mb-1.5 block text-sm text-gray-700">
@@ -250,7 +263,6 @@
 						</div>
 					</div>
 
-					<!-- Board Owner -->
 					<div>
 						<label class="mb-1.5 block text-sm text-gray-700">
 							Board Owner <span class="text-red-500">*</span>
@@ -271,7 +283,6 @@
 						</Select>
 					</div>
 
-					<!-- Enable Task Rating -->
 					<div class="flex items-center gap-2">
 						<Switch v-model:checked="taskRatingEnabled" />
 						<span class="text-sm text-gray-800"
@@ -293,7 +304,14 @@
 
 <script setup>
 import { onMounted, reactive, ref } from "vue";
-import { Plus, LayoutGrid, ChevronLeft, User, Users } from "lucide-vue-next";
+import {
+	Plus,
+	LayoutGrid,
+	ChevronLeft,
+	ChevronRight,
+	User,
+	Users,
+} from "lucide-vue-next";
 import { Switch } from "reka-ui/namespaced";
 import DialogFooter from "@/components/ui/dialog/DialogFooter.vue";
 import Select from "@/components/ui/select/Select.vue";
@@ -313,6 +331,8 @@ import SelectContent from "@/components/ui/select/SelectContent.vue";
 
 import { useTask } from "@/stores/taskStore";
 import Input from "@/components/ui/input/Input.vue";
+
+const showSidebar = ref(true);
 const taskStore = useTask();
 
 const filterText = ref("");
