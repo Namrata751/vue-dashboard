@@ -50,7 +50,7 @@ const groups = [
 			},
 			{
 				title: "Leave Balance",
-				url: "#",
+				url: "/leave-balances",
 				icon: Wallet,
 			},
 			{

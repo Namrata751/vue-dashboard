@@ -20,6 +20,11 @@ const router = createRouter({
 			component: () => import("../views/MyRequest.vue"),
 		},
 		{
+			path: "/leave-balances",
+			name: "Leave Balances",
+			component: () => import("../views/LeaveBalance.vue"),
+		},
+		{
 			path: "/learning",
 			name: "Learning",
 			component: () => import("../views/Learning.vue"),
