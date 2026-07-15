@@ -8,15 +8,16 @@ const router = createRouter({
 			name: "Home",
 			component: () => import("../views/Home.vue"),
 		},
-		{
-			path: "/about",
-			name: "About",
-			component: () => import("../views/About.vue"),
-		},
+
 		{
 			path: "/profile",
 			name: "Profile",
 			component: () => import("../views/Profile.vue"),
+		},
+		{
+			path: "/learning",
+			name: "Learning",
+			component: () => import("../views/Learning.vue"),
 		},
 	],
 	scrollBehavior(to, _from, savedPosition) {

@@ -40,7 +40,7 @@ const groups = [
 			},
 			{
 				title: "My Profile",
-				url: "about",
+				url: "profile",
 				icon: User,
 			},
 			{
@@ -80,7 +80,7 @@ const groups = [
 			},
 			{
 				title: "Learning",
-				url: "#",
+				url: "/learning",
 				icon: GraduationCap,
 			},
 			{
