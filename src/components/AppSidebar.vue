@@ -45,7 +45,7 @@ const groups = [
 			},
 			{
 				title: "My Requests",
-				url: "#",
+				url: "/my-requests",
 				icon: FileText,
 			},
 			{
