@@ -2,6 +2,8 @@
 
 @import "tailwindcss";
 
+@import "tw-animate-css";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -123,10 +125,15 @@
 
 @theme {
 	--font-inter: "inter";
-	--color-brand-primary: #192839;
+	--color-brand-primary: #013b5b;
 	--color-border-sidebar: #404f60;
 	--color-border-gray: #dee2e6;
 	--color-secondary: #3e5463;
 	--color-primary: #ed5a1e;
-	--color-text-primary: #1c2b36;
+	--color-text-primary: #000626;
+	--color-icon-primary: #494d5c;
+}
+
+body {
+	font-family: "Inter", sans-serif;
 }
