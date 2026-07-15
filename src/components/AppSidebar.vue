@@ -55,7 +55,7 @@ const groups = [
 			},
 			{
 				title: "Tasks",
-				url: "#",
+				url: "/task",
 				icon: CheckSquare,
 			},
 			{
