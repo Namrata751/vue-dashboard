@@ -70,7 +70,7 @@ const groups = [
 			},
 			{
 				title: "KSAs",
-				url: "#",
+				url: "/ksa",
 				icon: Award,
 			},
 			{
