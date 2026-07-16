@@ -30,6 +30,11 @@ const router = createRouter({
 			component: () => import("../views/Task.vue"),
 		},
 		{
+			path: "/daily-work-log",
+			name: "Daily Work Log",
+			component: () => import("../views/DailyWorkLog.vue"),
+		},
+		{
 			path: "/learning",
 			name: "Learning",
 			component: () => import("../views/Learning.vue"),

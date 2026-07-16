@@ -12,7 +12,7 @@
 						: '-translate-x-full opacity-0'
 				"
 			>
-				<h1 class="mb-4 text-xl font-bold text-gray-900">Boards</h1>
+				<h1 class="text-lg font-semibold text-text-primary">Boards</h1>
 
 				<input
 					v-model="filterText"
@@ -23,7 +23,7 @@
 
 				<div class="mb-6">
 					<div class="mb-2 flex items-center gap-2">
-						<h2 class="text-base font-bold text-gray-900">
+						<h2 class="text-base font-semibold text-text-primary">
 							My Boards
 						</h2>
 						<button
@@ -47,7 +47,7 @@
 				</div>
 
 				<div>
-					<h2 class="text-base font-bold text-gray-900">
+					<h2 class="text-base font-semibold text-text-primary">
 						Team Boards
 					</h2>
 				</div>
@@ -65,7 +65,9 @@
 		<main class="flex-1 px-8 py-6">
 			<div class="mb-5 flex items-center gap-2">
 				<User class="h-5 w-5 text-gray-800" />
-				<h2 class="text-xl font-bold text-gray-900">My Boards</h2>
+				<h2 class="text-lg font-semibold text-text-primary">
+					My Boards
+				</h2>
 				<button
 					class="flex h-6 w-6 items-center justify-center rounded-md border border-gray-300 text-gray-500 hover:bg-gray-100"
 					@click="createBoard"
@@ -78,7 +80,7 @@
 				<div
 					v-for="board in myBoards"
 					:key="board.name"
-					class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm"
+					class="rounded-lg bg-white p-6 shadow"
 				>
 					<h3 class="mb-4 text-lg font-bold text-gray-900">
 						{{ board.name }}
@@ -134,7 +136,7 @@
 					:key="board.name"
 					class="rounded-lg border border-gray-200 bg-white p-5 shadow-sm"
 				>
-					<h3 class="mb-4 text-lg font-bold text-gray-900">
+					<h3 class="mb-4 text-lg font-semibold text-text-primary">
 						{{ board.name }}
 					</h3>
 

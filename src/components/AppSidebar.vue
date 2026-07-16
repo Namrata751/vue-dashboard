@@ -65,7 +65,7 @@ const groups = [
 			},
 			{
 				title: "Daily Work Logs",
-				url: "#",
+				url: "/daily-work-log",
 				icon: ClipboardList,
 			},
 			{
