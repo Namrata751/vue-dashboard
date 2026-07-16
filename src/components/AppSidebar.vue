@@ -60,7 +60,7 @@ const groups = [
 			},
 			{
 				title: "Timesheet",
-				url: "#",
+				url: "/timesheets",
 				icon: Clock,
 			},
 			{

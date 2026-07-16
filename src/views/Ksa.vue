@@ -48,24 +48,8 @@
 	</div>
 </template>
 
-<script setup>
-import { ref } from "vue";
-import {
-	Clock,
-	ListChecks,
-	History as HistoryIcon,
-	FolderOpen,
-	FileText,
-	CalendarIcon,
-	X,
-} from "lucide-vue-next";
+<script setup lang="ts">
+import { Clock, ListChecks, FileText } from "lucide-vue-next";
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Button } from "@/components/ui/button";
-import {
-	Popover,
-	PopoverContent,
-	PopoverTrigger,
-} from "@/components/ui/popover";
-import { Calendar } from "@/components/ui/calendar";
 </script>
