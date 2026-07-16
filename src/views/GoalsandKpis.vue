@@ -9,41 +9,47 @@
 			<aside class="w-55 shrink-0 border-r border-gray-200 bg-white">
 				<div class="mb-5 flex items-center gap-2 px-2 border-b p-2">
 					<Clock class="h-5 w-5 text-gray-800" />
-					<h1 class="font-semibold text-text-primary">Work Logs</h1>
+					<h1 class="font-semibold text-text-primary">
+						Goals and KPIs
+					</h1>
 				</div>
 
-				<p class="px-2 text-sm font-semibold text-text-primary">Me</p>
+				<p class="px-2 text-sm font-semibold text-text-primary">
+					Tracking
+				</p>
 
 				<TabsList
-					class="flex h-auto w-full flex-col items-stretch gap-1 bg-transparent p-2"
+					class="flex h-auto w-full flex-col items-stretch gap-1 bg-transparent p-0"
 				>
-					<TabsTrigger
-						value="my-log"
-						class="flex w-full items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
-					>
-						<ListChecks class="h-4 w-4" />
-						My Work Log
-					</TabsTrigger>
-					<TabsTrigger
-						value="history"
-						class="flex w-full items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
-					>
-						<HistoryIcon class="h-4 w-4" />
-						History
-					</TabsTrigger>
-					<TabsTrigger
-						value="projects"
-						class="flex w-full items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
-					>
-						<FolderOpen class="h-4 w-4" />
-						Projects
-					</TabsTrigger>
+					<div class="p-2">
+						<TabsTrigger
+							value="my-log"
+							class="flex w-full items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
+						>
+							<ListChecks class="h-4 w-4" />
+							KPI Progress
+						</TabsTrigger>
+						<TabsTrigger
+							value="history"
+							class="flex w-full items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
+						>
+							<HistoryIcon class="h-4 w-4" />
+							KPI Update
+						</TabsTrigger>
+						<TabsTrigger
+							value="projects"
+							class="flex w-full items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
+						>
+							<FolderOpen class="h-4 w-4" />
+							KPI Tracking
+						</TabsTrigger>
+					</div>
 					<TabsTrigger
 						value="report"
-						class="flex w-full items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
+						class="flex w-full items-center border-x-0 border-gray-200 justify-start gap-2 rounded-none px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
 					>
 						<FileText class="h-4 w-4" />
-						My Work Report
+						Goals and KPI History
 					</TabsTrigger>
 				</TabsList>
 			</aside>
@@ -51,51 +57,14 @@
 			<main class="flex-1 p-4">
 				<TabsContent value="my-log" class="m-0">
 					<h2 class="text-base font-semibold text-text-primary mb-4">
-						Work Log
+						Goals and KPI Progress
 					</h2>
 
 					<button
-						class="mb-4 flex w-16 flex-col items-center rounded-md border border-brand-primary px-2 py-2 text-text-primary"
+						class="mb-4 flex flex-col items-center rounded-md border border-brand-primary bg-white text-brand-primary px-2 py-2"
 					>
-						<span class="text-xl font-bold leading-none">{{
-							today.day
-						}}</span>
-						<span class="mt-1 text-xs font-semibold uppercase">{{
-							today.weekday
-						}}</span>
-						<span
-							class="mt-1 h-1 w-4 rounded-full bg-gray-200"
-						></span>
+						My Goals
 					</button>
-
-					<p class="mb-4 text-base font-semibold text-gray-900">
-						{{ today.full }}
-					</p>
-
-					<p class="mb-2 text-sm font-semibold text-gray-800">
-						Worklog Today
-					</p>
-
-					<div
-						class="flex flex-col items-center rounded-lg border border-gray-200 bg-white px-6 py-10 text-center"
-					>
-						<div
-							class="mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-gray-100"
-						>
-							<FileText class="h-5 w-5 text-gray-500" />
-						</div>
-						<p class="mb-1 text-base font-bold text-gray-900">
-							You have not added any Work Log Today
-						</p>
-						<p class="text-sm text-gray-500">
-							If you worked, you can mark your attendance and
-							<a
-								href="#"
-								class="text-text-primary hover:underline"
-								>submit your work log</a
-							>
-						</p>
-					</div>
 				</TabsContent>
 
 				<TabsContent value="history" class="m-0">
@@ -119,7 +88,7 @@
 									/>
 								</button>
 							</PopoverTrigger>
-							<PopoverContent class="w-auto p-0" align="start">
+							<PopoverContent class="w-auto p-0">
 								<Calendar v-model="fromDate" mode="single" />
 							</PopoverContent>
 						</Popover>

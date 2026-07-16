@@ -75,7 +75,7 @@ const groups = [
 			},
 			{
 				title: "Goals and KPIs",
-				url: "#",
+				url: "/goals-and-KPI",
 				icon: Target,
 			},
 			{

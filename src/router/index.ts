@@ -45,6 +45,11 @@ const router = createRouter({
 			component: () => import("../views/Ksa.vue"),
 		},
 		{
+			path: "/goals-and-KPI",
+			name: "Goals And KPI",
+			component: () => import("../views/GoalsandKpis.vue"),
+		},
+		{
 			path: "/learning",
 			name: "Learning",
 			component: () => import("../views/Learning.vue"),
