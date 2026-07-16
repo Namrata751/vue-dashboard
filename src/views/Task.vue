@@ -1,5 +1,5 @@
 <template>
-	<div class="flex h-full bg-gray-50">
+	<div class="flex h-full bg-gray-100">
 		<div
 			class="relative shrink-0 transition-all duration-300"
 			:class="showSidebar ? 'w-[320px]' : 'w-0'"
