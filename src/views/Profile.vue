@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import Gif from "../assets/user.gif";
 import {
 	FileText,
 	ListTree,
@@ -16,7 +17,8 @@ import {
 	Network,
 	ChevronDown,
 } from "lucide-vue-next";
-import Profile from "../assets/namrata.jpg";
+// import Profile from "../assets/namrata.jpg";
+import ProfileInformation from "@/components/card/ProfileInformation.vue";
 
 const activeTab = ref("profile");
 
@@ -40,7 +42,7 @@ const employee = {
 	department: "Frontend",
 	eid: "EID-68",
 	ein: "EIN-68",
-	photo: Profile,
+	photo: Gif,
 	job: {
 		level: "Software Engineer",
 		jobTitle: "Software Engineer",
@@ -282,9 +284,7 @@ const employee = {
 					:value="tab.value"
 					class="mt-0"
 				>
-					<p class="text-gray-500">
-						{{ tab.label }} content goes here.
-					</p>
+					<ProfileInformation />
 				</TabsContent>
 			</main>
 		</Tabs>

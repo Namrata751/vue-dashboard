@@ -85,7 +85,7 @@ const groups = [
 			},
 			{
 				title: "Trainings",
-				url: "#",
+				url: "/trainings",
 				icon: BookOpen,
 			},
 			{
