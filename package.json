@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@lucide/vue": "^1.24.0",
+    "@lucide/vue": "^1.25.0",
     "@tailwindcss/postcss": "^4.3.2",
     "@tanstack/vue-table": "^8.21.3",
     "@vueuse/core": "^14.3.0",

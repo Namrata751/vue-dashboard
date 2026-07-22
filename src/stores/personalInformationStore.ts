@@ -23,6 +23,13 @@ export const personalInformationStore = defineStore(
 			) {
 				this.$patch(payload);
 			},
+			deletePersonalInformation() {
+				this.$patch({
+					currentAddress: "",
+					permanentAddress: "",
+					personalPhone: "",
+				});
+			},
 		},
 		persist: true,
 	},

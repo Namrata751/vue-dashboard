@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, reactive } from "vue";
-import { Edit } from "lucide-vue-next";
+import { Delete, Edit, Trash } from "lucide-vue-next";
 import {
 	Dialog,
 	DialogClose,
@@ -14,7 +14,17 @@ import Input from "../ui/input/Input.vue";
 import Button from "../ui/button/Button.vue";
 import Label from "../ui/label/Label.vue";
 import { personalInformationStore } from "@/stores/personalInformationStore";
-
+import {
+	AlertDialog,
+	AlertDialogAction,
+	AlertDialogCancel,
+	AlertDialogContent,
+	AlertDialogDescription,
+	AlertDialogFooter,
+	AlertDialogHeader,
+	AlertDialogTitle,
+	AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 const store = personalInformationStore();
 const open = ref(false);
 
@@ -39,6 +49,10 @@ function handleSave() {
 	store.updatePersonalInformation({ ...form });
 	open.value = false;
 }
+
+function handleDelete() {
+	store.deletePersonalInformation();
+}
 </script>
 
 <template>
@@ -50,59 +64,91 @@ function handleSave() {
 					Address and Contact
 				</h3>
 
-				<Dialog :open="open" @update:open="handleOpenChange">
-					<DialogTrigger as-child>
-						<Button
-							variant="outline"
-							class="bg-gray-100 size-6 rounded flex items-center justify-center cursor-pointer border"
-						>
-							<Edit class="size-4 text-brand-primary" />
-						</Button>
-					</DialogTrigger>
-					<DialogContent class="sm:max-w-131.25">
-						<DialogHeader>
-							<DialogTitle>Edit Address and Contact</DialogTitle>
-						</DialogHeader>
-						<div class="grid gap-4">
-							<div class="grid gap-2">
-								<Label for="current-address"
-									>Current Address</Label
+				<div class="flex gap-2">
+					<AlertDialog>
+						<AlertDialogTrigger as-child>
+							<Button
+								variant="outline"
+								class="bg-gray-100 size-6 rounded flex items-center justify-center cursor-pointer border"
+							>
+								<Trash class="size-4 text-brand-primary" />
+							</Button>
+						</AlertDialogTrigger>
+						<AlertDialogContent>
+							<AlertDialogHeader>
+								<AlertDialogTitle
+									>Are you sure?</AlertDialogTitle
 								>
-								<Input
-									id="current-address"
-									name="currentAddress"
-									v-model="form.currentAddress"
-								/>
-							</div>
-							<div class="grid gap-2">
-								<Label for="permanent-address"
-									>Permanent Address</Label
+								<AlertDialogDescription>
+									This will permanently delete your address
+									and contact information. This action cannot
+									be undone.
+								</AlertDialogDescription>
+							</AlertDialogHeader>
+							<AlertDialogFooter>
+								<AlertDialogCancel>Cancel</AlertDialogCancel>
+								<AlertDialogAction @click="handleDelete">
+									Delete
+								</AlertDialogAction>
+							</AlertDialogFooter>
+						</AlertDialogContent>
+					</AlertDialog>
+					<Dialog :open="open" @update:open="handleOpenChange">
+						<DialogTrigger as-child>
+							<Button
+								variant="outline"
+								class="bg-gray-100 size-6 rounded flex items-center justify-center cursor-pointer border"
+							>
+								<Edit class="size-4 text-brand-primary" />
+							</Button>
+						</DialogTrigger>
+						<DialogContent class="sm:max-w-131.25">
+							<DialogHeader>
+								<DialogTitle
+									>Edit Address and Contact</DialogTitle
 								>
-								<Input
-									id="permanent-address"
-									name="permanentAddress"
-									v-model="form.permanentAddress"
-								/>
+							</DialogHeader>
+							<div class="grid gap-4">
+								<div class="grid gap-2">
+									<Label for="current-address"
+										>Current Address</Label
+									>
+									<Input
+										id="current-address"
+										name="currentAddress"
+										v-model="form.currentAddress"
+									/>
+								</div>
+								<div class="grid gap-2">
+									<Label for="permanent-address"
+										>Permanent Address</Label
+									>
+									<Input
+										id="permanent-address"
+										name="permanentAddress"
+										v-model="form.permanentAddress"
+									/>
+								</div>
+								<div class="grid gap-2">
+									<Label for="personal-phone"
+										>Personal Phone</Label
+									>
+									<Input
+										id="personal-phone"
+										name="personalPhone"
+										v-model="form.personalPhone"
+									/>
+								</div>
 							</div>
-							<div class="grid gap-2">
-								<Label for="personal-phone"
-									>Personal Phone</Label
-								>
-								<Input
-									id="personal-phone"
-									name="personalPhone"
-									v-model="form.personalPhone"
-								/>
-							</div>
-						</div>
-						<DialogFooter>
-							<DialogClose as-child>
-								<Button variant="outline">Cancel</Button>
-							</DialogClose>
-							<Button @click="handleSave">Save</Button>
-						</DialogFooter>
-					</DialogContent>
-				</Dialog>
+							<DialogFooter>
+								<DialogClose as-child>
+									<Button variant="outline">Cancel</Button>
+								</DialogClose>
+								<Button @click="handleSave">Save</Button>
+							</DialogFooter>
+						</DialogContent>
+					</Dialog>
+				</div>
 			</div>
 
 			<div class="space-y-2">
