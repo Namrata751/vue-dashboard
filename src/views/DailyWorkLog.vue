@@ -19,28 +19,28 @@
 				>
 					<TabsTrigger
 						value="my-log"
-						class="flex w-full items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
+						class="flex w-full items-center justify-start gap-2 rounded px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
 					>
 						<ListChecks class="h-4 w-4" />
 						My Work Log
 					</TabsTrigger>
 					<TabsTrigger
 						value="history"
-						class="flex w-full items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
+						class="flex w-full items-center justify-start gap-2 rounded px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
 					>
 						<HistoryIcon class="h-4 w-4" />
 						History
 					</TabsTrigger>
 					<TabsTrigger
 						value="projects"
-						class="flex w-full items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
+						class="flex w-full items-center justify-start gap-2 rounded px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
 					>
 						<FolderOpen class="h-4 w-4" />
 						Projects
 					</TabsTrigger>
 					<TabsTrigger
 						value="report"
-						class="flex w-full items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
+						class="flex w-full items-center justify-start gap-2 rounded px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
 					>
 						<FileText class="h-4 w-4" />
 						My Work Report
@@ -55,7 +55,7 @@
 					</h2>
 
 					<button
-						class="mb-4 flex w-16 flex-col items-center rounded-md border border-brand-primary px-2 py-2 text-text-primary"
+						class="mb-4 flex w-16 flex-col items-center rounded border border-brand-primary px-2 py-2 text-text-primary"
 					>
 						<span class="text-xl font-bold leading-none">{{
 							today.day
@@ -80,7 +80,7 @@
 						class="flex flex-col items-center rounded-lg border border-gray-200 bg-white px-6 py-10 text-center"
 					>
 						<div
-							class="mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-gray-100"
+							class="mb-4 flex h-10 w-10 items-center justify-center rounded bg-gray-100"
 						>
 							<FileText class="h-5 w-5 text-gray-500" />
 						</div>
@@ -107,7 +107,7 @@
 						<Popover>
 							<PopoverTrigger as-child>
 								<button
-									class="flex items-center gap-2 rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-700"
+									class="flex items-center gap-2 rounded border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-700"
 								>
 									<CalendarIcon
 										class="h-4 w-4 text-gray-400"
@@ -127,7 +127,7 @@
 						<Popover>
 							<PopoverTrigger as-child>
 								<button
-									class="flex items-center gap-2 rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-700"
+									class="flex items-center gap-2 rounded border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-700"
 								>
 									<CalendarIcon
 										class="h-4 w-4 text-gray-400"
@@ -154,7 +154,7 @@
 					</div>
 
 					<div
-						class="overflow-hidden rounded-md border border-gray-200 bg-white"
+						class="overflow-hidden rounded border border-gray-200 bg-white"
 					>
 						<Table>
 							<TableHeader>

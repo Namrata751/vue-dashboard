@@ -24,21 +24,21 @@
 					<div class="p-2">
 						<TabsTrigger
 							value="my-log"
-							class="flex w-full items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
+							class="flex w-full items-center justify-start gap-2 rounded px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
 						>
 							<ListChecks class="h-4 w-4" />
 							KPI Progress
 						</TabsTrigger>
 						<TabsTrigger
 							value="history"
-							class="flex w-full items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
+							class="flex w-full items-center justify-start gap-2 rounded px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
 						>
 							<HistoryIcon class="h-4 w-4" />
 							KPI Update
 						</TabsTrigger>
 						<TabsTrigger
 							value="projects"
-							class="flex w-full items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
+							class="flex w-full items-center justify-start gap-2 rounded px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
 						>
 							<FolderOpen class="h-4 w-4" />
 							KPI Tracking
@@ -61,7 +61,7 @@
 					</h2>
 
 					<button
-						class="mb-4 flex flex-col items-center rounded-md border border-brand-primary bg-white text-brand-primary px-2 py-2"
+						class="mb-4 flex flex-col items-center rounded border border-brand-primary bg-white text-brand-primary px-2 py-2"
 					>
 						My Goals
 					</button>
@@ -76,7 +76,7 @@
 						<Popover>
 							<PopoverTrigger as-child>
 								<button
-									class="flex items-center gap-2 rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-700"
+									class="flex items-center gap-2 rounded border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-700"
 								>
 									<CalendarIcon
 										class="h-4 w-4 text-gray-400"
@@ -96,7 +96,7 @@
 						<Popover>
 							<PopoverTrigger as-child>
 								<button
-									class="flex items-center gap-2 rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-700"
+									class="flex items-center gap-2 rounded border border-gray-300 bg-white px-3 py-1.5 text-sm text-gray-700"
 								>
 									<CalendarIcon
 										class="h-4 w-4 text-gray-400"
@@ -123,7 +123,7 @@
 					</div>
 
 					<div
-						class="overflow-hidden rounded-md border border-gray-200 bg-white"
+						class="overflow-hidden rounded border border-gray-200 bg-white"
 					>
 						<Table>
 							<TableHeader>

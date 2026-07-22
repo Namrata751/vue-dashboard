@@ -17,7 +17,7 @@
 				>
 					<TabsTrigger
 						value="my-log"
-						class="flex w-full items-center justify-start gap-2 rounded-md px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
+						class="flex w-full items-center justify-start gap-2 rounded px-2 py-2 text-sm font-medium text-gray-700 data-[state=active]:bg-gray-100 data-[state=active]:text-gray-900 data-[state=active]:shadow-none"
 					>
 						<ListChecks class="h-4 w-4" />
 						My KSAs
@@ -35,7 +35,7 @@
 						class="flex flex-col items-center rounded-lg border border-gray-200 bg-white px-6 py-10 text-center"
 					>
 						<div
-							class="mb-4 flex h-10 w-10 items-center justify-center rounded-md bg-gray-100"
+							class="mb-4 flex h-10 w-10 items-center justify-center rounded bg-gray-100"
 						>
 							<FileText class="h-5 w-5 text-gray-500" />
 						</div>

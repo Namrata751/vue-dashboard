@@ -57,7 +57,7 @@
 					<Button @click="applyPending">Apply</Button>
 				</div>
 
-				<div class="overflow-hidden rounded-md border border-gray-200">
+				<div class="overflow-hidden rounded border border-gray-200">
 					<Table>
 						<TableHeader>
 							<TableRow>
@@ -185,7 +185,7 @@
 					<Button @click="applyCompleted">Apply</Button>
 				</div>
 
-				<div class="overflow-hidden rounded-md border border-gray-200">
+				<div class="overflow-hidden rounded border border-gray-200">
 					<Table>
 						<TableHeader>
 							<TableRow>

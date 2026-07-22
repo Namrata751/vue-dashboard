@@ -18,7 +18,7 @@
 					v-model="filterText"
 					type="text"
 					placeholder="filter boards"
-					class="mb-6 w-full rounded-md border border-gray-300 px-3 py-2 text-sm text-gray-700 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+					class="mb-6 w-full rounded border border-gray-300 px-3 py-2 text-sm text-gray-700 placeholder:text-gray-400 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
 				/>
 
 				<div class="mb-6">
@@ -37,7 +37,7 @@
 					<ul class="space-y-1">
 						<li v-for="board in myBoards" :key="board.name">
 							<button
-								class="flex w-full items-center gap-2 rounded-md px-2 py-1.5 text-sm text-gray-700 hover:bg-gray-100"
+								class="flex w-full items-center gap-2 rounded px-2 py-1.5 text-sm text-gray-700 hover:bg-gray-100"
 							>
 								<LayoutGrid class="h-4 w-4 text-gray-500" />
 								{{ board.name }}
@@ -69,7 +69,7 @@
 					My Boards
 				</h2>
 				<button
-					class="flex h-6 w-6 items-center justify-center rounded-md border border-gray-300 text-gray-500 hover:bg-gray-100"
+					class="flex h-6 w-6 items-center justify-center rounded border border-gray-300 text-gray-500 hover:bg-gray-100"
 					@click="createBoard"
 				>
 					<Plus class="h-4 w-4" />

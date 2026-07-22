@@ -211,14 +211,14 @@ const attendance = [
 								class="flex items-center gap-2 rounded-lg bg-gray-50 p-2"
 							>
 								<span
-									class="w-16 flex-shrink-0 rounded-md bg-gray-100 px-2 py-1.5 text-center text-sm font-medium text-gray-700"
+									class="w-16 flex-shrink-0 rounded bg-gray-100 px-2 py-1.5 text-center text-sm font-medium text-gray-700"
 								>
 									{{ record.date }}
 								</span>
 
 								<span
 									v-if="record.checkIn"
-									class="flex items-center gap-1 rounded-md bg-emerald-50 px-2 py-1.5 text-sm font-medium text-emerald-700"
+									class="flex items-center gap-1 rounded bg-emerald-50 px-2 py-1.5 text-sm font-medium text-emerald-700"
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -238,14 +238,14 @@ const attendance = [
 								</span>
 								<span
 									v-else-if="record.checkInLabel"
-									class="rounded-md bg-gray-100 px-2 py-1.5 text-sm font-medium text-gray-500"
+									class="rounded bg-gray-100 px-2 py-1.5 text-sm font-medium text-gray-500"
 								>
 									{{ record.checkInLabel }}
 								</span>
 
 								<span
 									v-if="record.checkOut"
-									class="flex items-center gap-1 rounded-md bg-blue-50 px-2 py-1.5 text-sm font-medium text-blue-700"
+									class="flex items-center gap-1 rounded bg-blue-50 px-2 py-1.5 text-sm font-medium text-blue-700"
 								>
 									<svg
 										xmlns="http://www.w3.org/2000/svg"
@@ -265,7 +265,7 @@ const attendance = [
 								</span>
 								<span
 									v-else-if="record.checkOutLabel"
-									class="rounded-md bg-rose-50 px-2 py-1.5 text-sm font-medium text-rose-400"
+									class="rounded bg-rose-50 px-2 py-1.5 text-sm font-medium text-rose-400"
 								>
 									{{ record.checkOutLabel }}
 								</span>

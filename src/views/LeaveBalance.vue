@@ -86,7 +86,7 @@
 							</CollapsibleTrigger>
 							<CollapsibleContent class="mt-2">
 								<div
-									class="overflow-hidden rounded-md border border-gray-200"
+									class="overflow-hidden rounded border border-gray-200"
 								>
 									<Table>
 										<TableHeader>
@@ -180,7 +180,7 @@
 								>Upload Documents</label
 							>
 							<label
-								class="flex cursor-pointer items-center gap-3 rounded-md border border-gray-200 px-4 py-3 hover:bg-gray-50"
+								class="flex cursor-pointer items-center gap-3 rounded border border-gray-200 px-4 py-3 hover:bg-gray-50"
 							>
 								<FileUp class="h-5 w-5 text-gray-500" />
 								<div>
@@ -231,7 +231,7 @@
 			</Dialog>
 		</div>
 
-		<div class="overflow-hidden rounded-md border border-gray-200 bg-white">
+		<div class="overflow-hidden rounded border border-gray-200 bg-white">
 			<Table>
 				<TableHeader>
 					<TableRow>
@@ -308,7 +308,7 @@
 
 					<TabsContent value="summary" class="m-0 pt-3">
 						<div
-							class="overflow-hidden rounded-md border border-gray-200"
+							class="overflow-hidden rounded border border-gray-200"
 						>
 							<Table>
 								<TableBody>
@@ -331,7 +331,7 @@
 
 					<TabsContent value="log" class="m-0 pt-3">
 						<div
-							class="overflow-hidden rounded-md border border-gray-200"
+							class="overflow-hidden rounded border border-gray-200"
 						>
 							<Table>
 								<TableHeader>

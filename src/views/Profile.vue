@@ -89,19 +89,19 @@ const employee = {
 
 				<div class="mt-3 flex gap-2">
 					<span
-						class="rounded-md bg-brand-primary px-2 py-1 text-xs font-medium text-white"
+						class="rounded bg-brand-primary px-2 py-1 text-xs font-medium text-white"
 					>
 						{{ employee.eid }}
 					</span>
 					<span
-						class="rounded-md bg-gray-700 px-2 py-1 text-xs font-medium text-white"
+						class="rounded bg-gray-700 px-2 py-1 text-xs font-medium text-white"
 					>
 						{{ employee.ein }}
 					</span>
 				</div>
 
 				<button
-					class="mt-4 flex h-9 w-9 items-center justify-center rounded-md border border-gray-200 text-gray-500 hover:bg-gray-50"
+					class="mt-4 flex h-9 w-9 items-center justify-center rounded border border-gray-200 text-gray-500 hover:bg-gray-50"
 					aria-label="Org chart"
 				>
 					<Network class="h-4 w-4" />
@@ -116,7 +116,7 @@ const employee = {
 						v-for="tab in tabs"
 						:key="tab.value"
 						:value="tab.value"
-						class="flex w-full items-center justify-start gap-3 rounded-md px-3 py-2 text-left text-gray-600 data-[state=active]:bg-blue-50 data-[state=active]:text-brand-primary data-[state=active]:shadow-none hover:bg-gray-50"
+						class="flex w-full items-center justify-start gap-3 rounded px-3 py-2 text-left text-gray-600 data-[state=active]:bg-blue-50 data-[state=active]:text-brand-primary data-[state=active]:shadow-none hover:bg-gray-50"
 					>
 						<component :is="tab.icon" class="h-4 w-4 shrink-0" />
 						<span>{{ tab.label }}</span>
@@ -131,7 +131,7 @@ const employee = {
 							Profile Summary
 						</h1>
 						<button
-							class="flex h-6 w-6 items-center justify-center rounded-md border border-gray-200 text-gray-500 hover:bg-gray-50"
+							class="flex h-6 w-6 items-center justify-center rounded border border-gray-200 text-gray-500 hover:bg-gray-50"
 							aria-label="Collapse"
 						>
 							<ChevronDown class="h-4 w-4" />
